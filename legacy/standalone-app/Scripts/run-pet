@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+set -euo pipefail
+unsetopt BG_NICE
+
+LFP_SCRIPT_DIR=${0:A:h}
+LFP_PROJECT_DIR=${LFP_SCRIPT_DIR:h}
+LFP_EXECUTABLE="$LFP_PROJECT_DIR/.build/LuffyPet.app/Contents/MacOS/LuffyPet"
+
+if [[ ! -x "$LFP_EXECUTABLE" ]]; then
+  "$LFP_SCRIPT_DIR/build.sh"
+fi
+
+/usr/bin/python3 "$LFP_SCRIPT_DIR/watch_codex_state.py" &
+LFP_WATCHER_PID=$!
+
+function lfp_cleanup {
+  kill "$LFP_WATCHER_PID" 2>/dev/null || true
+}
+
+trap lfp_cleanup EXIT INT TERM HUP
+"$LFP_EXECUTABLE" "$LFP_PROJECT_DIR"

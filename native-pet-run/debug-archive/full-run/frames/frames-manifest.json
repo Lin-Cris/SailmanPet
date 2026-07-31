@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "chroma_key": {
+    "hex": "#00FF00",
+    "rgb": [
+      0,
+      255,
+      0
+    ],
+    "threshold": 96.0
+  },
+  "rows": [
+    {
+      "state": "running",
+      "frames": [
+        "/Users/chris/Desktop/lufyPet/native-pet-run/frames/running/00.png",
+        "/Users/chris/Desktop/lufyPet/native-pet-run/frames/running/01.png",
+        "/Users/chris/Desktop/lufyPet/native-pet-run/frames/running/02.png",
+        "/Users/chris/Desktop/lufyPet/native-pet-run/frames/running/03.png",
+        "/Users/chris/Desktop/lufyPet/native-pet-run/frames/running/04.png",
+        "/Users/chris/Desktop/lufyPet/native-pet-run/frames/running/05.png"
+      ],
+      "method": "components"
+    }
+  ]
+}

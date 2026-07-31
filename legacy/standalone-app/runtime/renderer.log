@@ -1,0 +1,14 @@
+LuffyPet runtime v2; project=/Users/chris/Desktop/lufyPet
+state=idle mode=spritesheet
+transition started targetLoaded=true
+state=coding mode=sequence frames=8
+transition completed
+transition started targetLoaded=true
+state=idle mode=spritesheet
+transition completed
+transition started targetLoaded=true
+state=coding mode=sequence frames=8
+transition completed
+transition started targetLoaded=true
+state=idle mode=spritesheet
+transition completed

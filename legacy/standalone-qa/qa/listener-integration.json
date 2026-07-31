@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "method": "real watcher subprocess polling an incrementally appended JSONL file",
+  "sessionsRoot": "qa/simulated-sessions",
+  "stateFile": ".runtime/luffy-pet-state.json",
+  "transitions": [
+    {
+      "event": "task_started",
+      "expected": "coding",
+      "observed": "coding"
+    },
+    {
+      "event": "entered_review_mode",
+      "expected": "review",
+      "observed": "review"
+    },
+    {
+      "event": "exited_review_mode",
+      "expected": "coding",
+      "observed": "coding"
+    },
+    {
+      "event": "task_complete",
+      "expected": "idle",
+      "observed": "idle"
+    }
+  ],
+  "rendererEvidence": "qa/listener-renderer.log"
+}

@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "baseline": {
+    "spritesheetCell": [192, 208],
+    "renderScale": 0.25,
+    "targetSize": [48, 52],
+    "sharedLayoutSlot": [52, 52],
+    "windowSize": [68, 68],
+    "windowPadding": 8
+  },
+  "states": {
+    "idle": {
+      "screenshot": "qa/final68-idle.jpg",
+      "contentBounds": [15, 9, 53, 59],
+      "visibleSize": [38, 50],
+      "result": "complete, proportional, no clipping"
+    },
+    "coding": {
+      "screenshot": "qa/final68-coding.jpg",
+      "contentBounds": [10, 5, 60, 55],
+      "visibleSize": [50, 50],
+      "result": "complete, proportional, transparent, no clipping"
+    },
+    "review": {
+      "screenshot": "qa/final68-review.jpg",
+      "contentBounds": [11, 5, 60, 53],
+      "visibleSize": [49, 48],
+      "result": "complete, proportional, transparent, no clipping"
+    },
+    "idleReturn": {
+      "screenshot": "qa/final68-idle-return.jpg",
+      "contentBounds": [15, 9, 53, 59],
+      "visibleSize": [38, 50],
+      "result": "matches initial idle; no residual frame"
+    }
+  },
+  "repairs": [
+    "Reduced the old 280x280 window and 260x260 image view to a 68x68 window with one shared 52x52 layout slot.",
+    "Established the atlas baseline as 192x208 rendered at 25%, producing a 48x52 target frame.",
+    "Aspect-fit external coding/review art into the shared slot instead of drawing at source resolution.",
+    "Applied a uniform 1.06 content normalization to the seated poses after transparent-margin trimming.",
+    "Reduced breathing translation to 0.6 px and retained 8 px window padding so motion remains smooth and unclipped."
+  ]
+}

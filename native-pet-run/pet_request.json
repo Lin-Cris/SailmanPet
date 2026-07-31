@@ -1,0 +1,20 @@
+{
+  "pet_id": "luffy-codex",
+  "display_name": "Luffy Coder",
+  "description": "A pixel-art anime coding companion who sleeps when idle, types while Codex works, and studies the laptop while Codex reviews.",
+  "sprite_version_number": 2,
+  "atlas": {
+    "columns": 8,
+    "rows": 11,
+    "cell_width": 192,
+    "cell_height": 208,
+    "width": 1536,
+    "height": 2288
+  },
+  "state_mapping": {
+    "idle": {"row": 0, "frames": 6, "behavior": "sleeping with a continuously growing and shrinking attached snoring bubble"},
+    "running": {"row": 7, "frames": 6, "behavior": "active laptop keyboard typing for coding, file modification, generation, and build work"},
+    "review": {"row": 8, "frames": 6, "behavior": "laptop review with one hand touching the chin for reading, reveal, inspection, and analysis"}
+  },
+  "source_assets": ["coding.png", "review.png", "spritesheet.webp"]
+}

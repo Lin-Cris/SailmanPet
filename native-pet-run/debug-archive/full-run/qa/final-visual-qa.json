@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "visual_qa": "pass",
+  "reviewed_by": "independent-final-visual-qa",
+  "summary": "All native rows preserve identity and correct motion: sleeping/snoring idle, directional drag gaits, wave, jump, failure, waiting, active keyboard typing, sustained chin-touch review, and a coherent 16-direction look loop.",
+  "repair_rows": [],
+  "accepted_warnings": [
+    "Intermediate blind ambiguity at 112.5 vertical, 202.5 horizontal, 247.5 vertical, and 315 vertical; labeled loop semantics are clear.",
+    "Continuity metric warnings at 157.5->180, 225->247.5, and 337.5->000; no visible identity break, clipping, structural defect, or semantic reversal."
+  ]
+}

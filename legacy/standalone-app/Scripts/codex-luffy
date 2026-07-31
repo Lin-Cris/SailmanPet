@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+set -u
+
+LFP_SCRIPT_DIR=${0:A:h}
+LFP_STATE="coding"
+
+for LFP_ARGUMENT in "$@"; do
+  if [[ "$LFP_ARGUMENT" == "review" ]]; then
+    LFP_STATE="review"
+    break
+  fi
+done
+
+function lfp_cleanup {
+  /usr/bin/python3 "$LFP_SCRIPT_DIR/set_luffy_state.py" idle
+}
+
+trap lfp_cleanup EXIT INT TERM HUP
+/usr/bin/python3 "$LFP_SCRIPT_DIR/set_luffy_state.py" "$LFP_STATE" --pid "$$"
+codex "$@"

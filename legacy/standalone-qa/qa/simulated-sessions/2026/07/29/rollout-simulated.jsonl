@@ -1,0 +1,5 @@
+{"type":"session_meta","payload":{"session_id":"luffy-listener-integration","originator":"Codex CLI","source":"cli"}}
+{"type":"event_msg","payload":{"type":"task_started","turn_id":"luffy-turn"}}
+{"type":"event_msg","payload":{"type":"entered_review_mode","turn_id":"luffy-turn"}}
+{"type":"event_msg","payload":{"type":"exited_review_mode","turn_id":"luffy-turn"}}
+{"type":"event_msg","payload":{"type":"task_complete","turn_id":"luffy-turn"}}

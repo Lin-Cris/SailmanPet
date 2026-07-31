@@ -1,0 +1,112 @@
+{
+  "ok": true,
+  "frames_root": "/Users/chris/Desktop/lufyPet/native-pet-run/frames",
+  "states": [
+    "review"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "review",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/chris/Desktop/lufyPet/native-pet-run/frames/review/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24537,
+          "bbox": [
+            11,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 255
+        },
+        {
+          "index": 1,
+          "file": "/Users/chris/Desktop/lufyPet/native-pet-run/frames/review/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24187,
+          "bbox": [
+            12,
+            5,
+            179,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 235
+        },
+        {
+          "index": 2,
+          "file": "/Users/chris/Desktop/lufyPet/native-pet-run/frames/review/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24551,
+          "bbox": [
+            11,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 237
+        },
+        {
+          "index": 3,
+          "file": "/Users/chris/Desktop/lufyPet/native-pet-run/frames/review/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24452,
+          "bbox": [
+            11,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 219
+        },
+        {
+          "index": 4,
+          "file": "/Users/chris/Desktop/lufyPet/native-pet-run/frames/review/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24376,
+          "bbox": [
+            12,
+            5,
+            180,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 270
+        },
+        {
+          "index": 5,
+          "file": "/Users/chris/Desktop/lufyPet/native-pet-run/frames/review/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24460,
+          "bbox": [
+            11,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 258
+        }
+      ]
+    }
+  ]
+}

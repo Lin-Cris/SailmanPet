@@ -1,0 +1,38 @@
+{
+  "id": "luffy",
+  "displayName": "Luffy",
+  "description": "A tiny straw-hat pirate captain pet with a red vest, blue shorts, and cheerful rubbery energy.",
+  "spritesheetPath": "spritesheet.webp",
+  "externalStates": {
+    "stateFile": ".runtime/luffy-pet-state.json",
+    "overrideFile": ".runtime/luffy-pet-override.json",
+    "pollIntervalMs": 250,
+    "fallbackState": "idle",
+    "states": {
+      "coding": {
+        "imagePath": "coding.png",
+        "framesDirectory": "assets/coding",
+        "framePattern": "coding_%02d.png",
+        "frameCount": 8,
+        "fps": 8,
+        "animation": {
+          "type": "breathing",
+          "amplitudePx": 0.6,
+          "periodMs": 1800
+        }
+      },
+      "review": {
+        "imagePath": "review.png",
+        "framesDirectory": "assets/review",
+        "framePattern": "review_%02d.png",
+        "frameCount": 8,
+        "fps": 8,
+        "animation": {
+          "type": "breathing",
+          "amplitudePx": 0.6,
+          "periodMs": 2200
+        }
+      }
+    }
+  }
+}

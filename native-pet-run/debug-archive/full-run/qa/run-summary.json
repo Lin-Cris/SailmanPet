@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "spriteVersionNumber": 2,
+  "run_dir": "/Users/chris/Desktop/lufyPet/native-pet-run",
+  "spritesheet": "/Users/chris/Desktop/lufyPet/native-pet-run/final/spritesheet-native-extended.webp",
+  "validation": "/Users/chris/Desktop/lufyPet/native-pet-run/final/validation-native.json",
+  "chroma_despill": "/Users/chris/Desktop/lufyPet/native-pet-run/qa/chroma-despill-native.json",
+  "contact_sheet": "/Users/chris/Desktop/lufyPet/native-pet-run/qa/contact-sheet-native-extended.png",
+  "direction_sheet": "/Users/chris/Desktop/lufyPet/native-pet-run/qa/look-directions-native.png",
+  "direction_semantics": "/Users/chris/Desktop/lufyPet/native-pet-run/qa/direction-semantics.json",
+  "blind_direction_validation": "/Users/chris/Desktop/lufyPet/native-pet-run/qa/direction-blind-validation-native.json",
+  "continuity": "/Users/chris/Desktop/lufyPet/native-pet-run/qa/look-continuity-native.json",
+  "review": "/Users/chris/Desktop/lufyPet/native-pet-run/qa/review.json",
+  "package": "/Users/chris/.codex/pets/luffy-codex",
+  "package_checksum_sha256": "474bbe6c2ebc5baa29bc05d10855f506ab9028ab2edd9448dc07746a71973753",
+  "ui_verification": {
+    "status": "manual_required",
+    "reason": "Codex computer-control blocks automation of com.openai.codex for safety.",
+    "remaining_checks": [
+      "Pet is visible in Settings → Pet → Select Pet",
+      "Pet can be selected and renders",
+      "Appearance changes affect the native renderer",
+      "Pet Size changes affect the native renderer"
+    ]
+  }
+}

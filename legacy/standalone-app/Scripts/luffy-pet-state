@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+set -u
+
+LFP_SCRIPT_DIR=${0:A:h}
+exec /usr/bin/python3 "$LFP_SCRIPT_DIR/set_luffy_state.py" "$@"
