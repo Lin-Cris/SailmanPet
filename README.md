@@ -1,10 +1,10 @@
-# Luffy Coder — Native Codex Pet
+# Luffy Coder
 
-This repository contains a real Codex custom-pet package. It does not contain or launch a standalone app, floating widget, preview runner, hook watcher, or parallel state system.
+A native Codex custom pet packaged as a v2 sprite atlas. This repository contains the pet assets and validation evidence.
 
-## Native registration
+## Use the pet
 
-The distributable package is:
+The distributable files are in [`pet-package/luffy-codex/`](pet-package/luffy-codex/):
 
 ```text
 pet-package/luffy-codex/
@@ -12,60 +12,28 @@ pet-package/luffy-codex/
 └── spritesheet.webp
 ```
 
-The installed native registration is:
+Install those files in `~/.codex/pets/luffy-codex/`, then select **Luffy Coder** in **Settings → Pet → Select Pet**. Appearance and Pet Size use Codex's native settings.
 
-```text
-~/.codex/pets/luffy-codex/
-├── pet.json
-└── spritesheet.webp
-```
+## Animation
 
-Codex discovers custom pets from this registry for **Settings → Pet → Select Pet**. The manifest uses `spriteVersionNumber: 2`, and the atlas is the native 8-column × 11-row format (`1536×2288`, `192×208` per cell).
+The manifest uses `spriteVersionNumber: 2`. The atlas has 8 columns and 11 rows at 1536 × 2288 pixels (192 × 208 per cell). Codex selects and plays the states.
 
-## Native behavior mapping
-
-Codex owns state selection and animation playback. No external watcher or custom renderer is used.
-
-| Native row | State | Frames | Behavior |
+| Atlas rows | State | Frames | Motion |
 | --- | --- | ---: | --- |
-| 0 | `idle` | 6 + neutral | Sleeping loop with subtle breathing and an attached snoring bubble that grows and shrinks |
-| 7 | `running` | 6 | Active laptop typing for code generation, edits, and build work |
-| 8 | `review` | 6 | Laptop analysis with one hand touching the chin for reading, reveal, inspection, and review |
-| 9–10 | look directions | 16 | Clockwise pointer-following directions for the native v2 renderer |
+| 0 | `idle` | 6 + neutral | Sleeping and breathing with a snoring bubble |
+| 1–6 | Standard states | — | Drag, wave, jump, failure, and waiting |
+| 7 | `running` | 6 | Typing at a laptop |
+| 8 | `review` | 6 | Reviewing with a hand at the chin |
+| 9–10 | Look directions | 16 | Pointer-following directions |
 
-Rows 1–6 retain the standard native drag, wave, jump, failure, and waiting animations.
-
-Appearance and Pet Size are not reimplemented here. They remain native Codex renderer settings and therefore apply to this pet through the same atlas rendering path as built-in pets.
-
-## Source art
-
-- `coding.png`
-- `review.png`
-- `spritesheet.webp`
-
-These files are retained as the supplied identity and pose sources. The package itself consumes only `pet.json` and the final native `spritesheet.webp`.
+The supplied pose artwork is retained as [`coding.png`](coding.png) and [`review.png`](review.png). The package consumes only `pet.json` and `spritesheet.webp`.
 
 ## Validation
 
-Retained evidence is under `native-pet-run/`:
+See [`native-pet-run/`](native-pet-run/) for the [validation result](native-pet-run/final/validation-native.json), [full contact sheet](native-pet-run/qa/contact-sheet-native-extended.png), [direction preview](native-pet-run/qa/look-directions-native.png), [animation previews](native-pet-run/qa/previews/), and [run summary](native-pet-run/qa/run-summary.json).
 
-- `final/validation-native.json` — v2 atlas validation
-- `qa/chroma-despill-native.json` — deterministic edge cleanup
-- `qa/review.json` — standard-row structural inspection
-- `qa/contact-sheet-native-extended.png` — all 11 rows
-- `qa/look-directions-native.png` — neutral plus all 16 directions
-- `qa/direction-blind-validation-native.json` — three-reviewer blind direction result
-- `qa/direction-semantics.json` — labeled semantic review
-- `qa/look-continuity-native.json` — adjacent direction measurements
-- `qa/previews/` — row animation GIFs
-- `qa/run-summary.json` — package and verification summary
+Package integrity, atlas structure, direction behavior, and animation rows were checked. Final selection and appearance controls should be checked in Codex Settings.
 
-The installed and workspace spritesheets share SHA-256:
+## License and commercial use
 
-```text
-474bbe6c2ebc5baa29bc05d10855f506ab9028ab2edd9448dc07746a71973753
-```
-
-## UI verification limitation
-
-The Codex computer-control safety layer blocks automation of `com.openai.codex`, so automated clicks inside Codex’s own Settings are unavailable. Package discovery, manifest integrity, atlas behavior, and renderer compatibility are verified; selection plus Appearance/Pet Size toggles require a manual Settings check.
+Original materials owned by Lin-Cris are available for personal, noncommercial use under the [SailmanPet Noncommercial License](LICENSE). Commercial use requires prior written permission from Lin-Cris; contact the maintainer privately to discuss licensing. Third-party rights are not included.
